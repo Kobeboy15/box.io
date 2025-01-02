@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+# Box.io
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Box.io** is a project developed as part of the **CPSC 1045: Introduction to Web Programming** course. This course focused on JavaScript, and the assignment was to create a game using only vanilla JavaScript—no external libraries or frameworks.
 
-## Available Scripts
+## Game Overview
 
-In the project directory, you can run:
+For this project, I designed a game inspired by the classic **Snake**, but with a unique twist. The focus is on **speedrunning** and **difficulty**, with the following key differences:
 
-### `npm start`
+- **Timer-based gameplay**: The game ends when the timer runs out, rather than when you collide with your tail.
+- **Simplified mechanics**: The traditional tail mechanics have been removed to streamline gameplay.
+- **Local scoreboard**: A local leaderboard system is implemented using the browser's `localStorage`.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Development Notes
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+While the game is functional, there are areas for improvement:
 
-### `npm test`
+- **Code organization**: Functions and logic could be better separated into dedicated JavaScript files for improved maintainability.
+- **Naming conventions**: Some function names lack clarity and could be more descriptive.
+- **Code quality**: Refactoring and optimization could enhance readability and performance.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Despite these areas for improvement, the project successfully meets its goals and demonstrates core JavaScript skills.
 
-### `npm run build`
+## How to Play
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone or download the repository.
+2. Open `index.html` in a modern web browser.
+3. Start the game, race against the timer, and try to secure a top spot on the local leaderboard!
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Key Features
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Pure JavaScript**: No external libraries or frameworks are used.
+- **Local Leaderboard**: Scores are stored in `localStorage` for persistent tracking.
+- **Focus on Speed and Skill**: Encourages quick reactions and precision.
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Enjoy the game and feel free to provide feedback or contribute to improve the project!
