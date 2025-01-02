@@ -22,6 +22,11 @@ Despite these areas for improvement, the project successfully meets its goals an
 
 ## How to Play
 
+Link to live game:
+https://box-io.vercel.app/
+
+or
+
 1. Clone or download the repository.
 2. Open `index.html` in a modern web browser.
 3. Start the game, race against the timer, and try to secure a top spot on the local leaderboard!
