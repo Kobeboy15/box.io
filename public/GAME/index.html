@@ -1,0 +1,214 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Iceland&display=swap"
+            rel="stylesheet"
+        />
+        <script src="script.js" defer></script>
+        <script src="sounds.js"></script>
+        <style type="text/css">
+            @keyframes fadeOut {
+                from {
+                    transform: translateY(0px);
+                    opacity: 1;
+                }
+
+                to {
+                    opacity: 0;
+                    transform: translateY(-10px);
+                }
+            }
+
+            html {
+                background: #000;
+                color: #fff;
+            }
+
+            body {
+                overscroll-behavior: none;
+                font-family: "Iceland", sans-serif;
+                display: grid;
+                margin: auto;
+                text-align: center;
+                /* max-width: 700px; */
+                grid-template-columns: 3fr 1fr;
+                gap: 40px;
+                align-items: flex-start;
+                height: 100vh;
+            }
+
+            .header-wrapper-container {
+                padding: 1em 0;
+                margin: 2em 0;
+
+                .timer-container {
+                    position: relative;
+                    .more-time {
+                        top: 0;
+                        left: -30px;
+                        position: absolute;
+                        color: #53ff53;
+                        opacity: 0;
+                    }
+                }
+            }
+
+            .header-wrapper {
+                font-size: 2em;
+                max-width: 600px;
+                margin: auto;
+                display: flex;
+                justify-content: space-between;
+                gap: 20px;
+
+                p {
+                    margin: 0;
+                    padding: 0;
+                }
+            }
+
+            .game-body {
+                display: flex;
+                justify-content: center;
+            }
+
+            .canvas-wrapper {
+                width: fit-content;
+                background-image: url("assets/map3.png");
+                background-size: contain;
+                padding: 10px;
+                /* border: 2px solid red; */
+            }
+
+            canvas {
+                /* border: 2px solid red; */
+                /* border-radius: 2px; */
+                /* background-image: url('assets/background.png'); */
+            }
+
+            .scoreboard-section {
+                width: 100%;
+                /* border: 1px solid red; */
+                text-align: left;
+                align-self: center;
+
+                h3 {
+                    margin: 0;
+                    padding: 12px 0;
+                    font-size: 28px;
+                    position: sticky;
+                    top: 0;
+                }
+
+                ul {
+                    max-height: calc(100vh - 100px);
+                    overflow: auto;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    list-style-type: none;
+                    padding: 0;
+                    /* max-width: 500px; */
+                    margin: 0;
+                    width: fit-content;
+                    padding-right: 56px;
+                    border-bottom: 1px solid white;
+
+                    .leaderboard-item {
+                        display: flex;
+                        flex-direction: column;
+
+                        p {
+                            padding: 0;
+                            margin: 0;
+                        }
+                    }
+
+                    .scoreboard-item {
+                        text-align: left;
+                        width: fit-content;
+                        p {
+                            margin: 0;
+                            padding: 0;
+                        }
+                    }
+                }
+            }
+
+            .reset-container {
+                margin-top: 48px;
+
+                button {
+                    border: 0;
+                    outline: none;
+                    background: transparent;
+                    color: #fff;
+                    font-family: inherit;
+                    font-size: 24px;
+                    transition: 0.2s ease-in-out;
+
+                    &:hover {
+                        cursor: pointer;
+                        transform: scale(1.15);
+                        transition: 0.2s ease-in-out;
+                    }
+                }
+            }
+
+            @media only screen and (max-width: 850px) {
+                body {
+                    grid-template-columns: 1fr;
+                    gap: 40px;
+                }
+
+                .scoreboard-section {
+                    max-width: calc(100% - 120px);
+                    margin: auto;
+
+                    h3 {
+                        width: fit-content;
+                    }
+
+                    #scoreboard {
+                        max-height: unset;
+                        height: 400px;
+                        margin-bottom: 32px;
+                        border-bottom: 1px solid white;
+                        width: fit-content;
+                        padding-right: 48px;
+                        overscroll-behavior: contain;
+                    }
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <div class="header-wrapper-container">
+                <div class="header-wrapper">
+                    <p>Score:&nbsp;<span id="score-output">0</span></p>
+                    <div id="timer-container-id" class="timer-container">
+                        <p id="timer"></p>
+                        <p id="more-time-id" class="more-time">+4</p>
+                    </div>
+                    <p>Round:&nbsp;<span id="round-output"></span></p>
+                </div>
+            </div>
+            <div class="game-body">
+                <div class="canvas-wrapper">
+                    <canvas id="canvasGame"></canvas>
+                </div>
+            </div>
+            <div class="reset-container">
+                <button onclick="window.location.reload();">Reset</button>
+            </div>
+        </div>
+        <div class="scoreboard-section">
+            <h3>Scoreboard</h3>
+            <ul id="scoreboard"></ul>
+        </div>
+    </body>
+</html>
